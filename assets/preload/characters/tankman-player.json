@@ -125,8 +125,8 @@
 	"no_antialiasing": false,
 	"image": "characters/tankmanCaptain",
 	"position": [
-		0,
-		240
+		130,
+		385
 	],
 	"healthicon": "tankman",
 	"flip_x": true,
@@ -136,9 +136,9 @@
 		225
 	],
 	"camera_position": [
-		0,
-		0
+		-200,
+		-160
 	],
 	"sing_duration": 4,
-	"scale": 1
+	"scale": 2
 }
