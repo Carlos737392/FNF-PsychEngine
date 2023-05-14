@@ -540,10 +540,10 @@ class PlayState extends MusicBeatState
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', 200, 200, ['halloweem bg0', 'halloweem bg lightning strike']);
-					bg.scale.set(4.0, 4.0);
+					halloweenBG.scale.set(4.0, 4.0);
 				} else {
 					halloweenBG = new BGSprite('halloween_bg_low', 200, 200);
-					bg.scale.set(4.0, 4.0);
+					halloweenBG.scale.set(4.0, 4.0);
 				}
 				add(halloweenBG);
 
