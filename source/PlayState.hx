@@ -512,6 +512,7 @@ class PlayState extends MusicBeatState
 		{
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
+				bg.scale.set(4.0, 4.0);
 				add(bg);
 
 				var stageFront:BGSprite = new BGSprite('stagefront', -650, 600, 0.9, 0.9);
