@@ -511,7 +511,7 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'stage': //Week 1
-				var bg:BGSprite = new BGSprite('stageback', 300, 350, 0.9, 0.9);
+				var bg:BGSprite = new BGSprite('stageback', 350, 350, 0.9, 0.9);
 				bg.scale.set(4.0, 4.0);
 				add(bg);
 
@@ -539,10 +539,10 @@ class PlayState extends MusicBeatState
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
-					halloweenBG = new BGSprite('halloween_bg', 500, 300, ['halloweem bg0', 'halloweem bg lightning strike']);
+					halloweenBG = new BGSprite('halloween_bg', 550, 300, ['halloweem bg0', 'halloweem bg lightning strike']);
 					halloweenBG.scale.set(4.0, 4.0);
 				} else {
-					halloweenBG = new BGSprite('halloween_bg_low', 500, 300);
+					halloweenBG = new BGSprite('halloween_bg_low', 550, 300);
 					halloweenBG.scale.set(4.0, 4.0);
 				}
 				add(halloweenBG);
