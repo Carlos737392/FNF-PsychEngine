@@ -539,10 +539,10 @@ class PlayState extends MusicBeatState
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
-					halloweenBG = new BGSprite('halloween_bg', 550, 300, ['halloweem bg0', 'halloweem bg lightning strike']);
+					halloweenBG = new BGSprite('halloween_bg', 600, 300, ['halloweem bg0', 'halloweem bg lightning strike']);
 					halloweenBG.scale.set(4.0, 4.0);
 				} else {
-					halloweenBG = new BGSprite('halloween_bg_low', 550, 300);
+					halloweenBG = new BGSprite('halloween_bg_low', 600, 300);
 					halloweenBG.scale.set(4.0, 4.0);
 				}
 				add(halloweenBG);
@@ -558,34 +558,40 @@ class PlayState extends MusicBeatState
 
 			case 'philly': //Week 3
 				if(!ClientPrefs.lowQuality) {
-					var bg:BGSprite = new BGSprite('philly/sky', -100, 0, 0.1, 0.1);
+					var bg:BGSprite = new BGSprite('philly/sky', 100, 20, 0.1, 0.1);
+					bg.scale.set(2.0, 2.0);
 					add(bg);
 				}
 
-				var city:BGSprite = new BGSprite('philly/city', -10, 0, 0.3, 0.3);
+				var city:BGSprite = new BGSprite('philly/city', 10, 20, 0.3, 0.3);
 				city.setGraphicSize(Std.int(city.width * 0.85));
 				city.updateHitbox();
+				city.scale.set(2.0, 2.0);
 				add(city);
 
 				phillyLightsColors = [0xFF31A2FD, 0xFF31FD8C, 0xFFFB33F5, 0xFFFD4531, 0xFFFBA633];
-				phillyWindow = new BGSprite('philly/window', city.x, city.y, 0.3, 0.3);
+				phillyWindow = new BGSprite('philly/window', city.x, city.y, 0.9, 0.9);
 				phillyWindow.setGraphicSize(Std.int(phillyWindow.width * 0.85));
 				phillyWindow.updateHitbox();
+				phillyWindow.scale.set(2.0, 2.0);
 				add(phillyWindow);
 				phillyWindow.alpha = 0;
 
 				if(!ClientPrefs.lowQuality) {
-					var streetBehind:BGSprite = new BGSprite('philly/behindTrain', -40, 50);
+					var streetBehind:BGSprite = new BGSprite('philly/behindTrain', 40, 150);
+					streetBehind.scale.set(2.0, 2.0);
 					add(streetBehind);
 				}
 
-				phillyTrain = new BGSprite('philly/train', 2000, 360);
+				phillyTrain = new BGSprite('philly/train', 10000, 1800);
+				phillyTrain.scale.set(4.0, 4.0);
 				add(phillyTrain);
 
 				trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));
 				FlxG.sound.list.add(trainSound);
 
-				phillyStreet = new BGSprite('philly/street', -40, 50);
+				phillyStreet = new BGSprite('philly/street', 40, 150);
+				phillyStreet.scale.set(2.0, 2.0);
 				add(phillyStreet);
 
 			case 'limo': //Week 4
