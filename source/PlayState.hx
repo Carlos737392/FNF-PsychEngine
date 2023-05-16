@@ -558,19 +558,19 @@ class PlayState extends MusicBeatState
 
 			case 'philly': //Week 3
 				if(!ClientPrefs.lowQuality) {
-					var bg:BGSprite = new BGSprite('philly/sky', 300, 40, 0.1, 0.1);
+					var bg:BGSprite = new BGSprite('philly/sky', 500, 50, 0.1, 0.1);
 					bg.scale.set(2.0, 2.0);
 					add(bg);
 				}
 
-				var city:BGSprite = new BGSprite('philly/city', 30, 40, 0.3, 0.3);
+				var city:BGSprite = new BGSprite('philly/city', 50, 50, 0.3, 0.3);
 				city.setGraphicSize(Std.int(city.width * 0.85));
 				city.updateHitbox();
 				city.scale.set(2.0, 2.0);
 				add(city);
 
 				phillyLightsColors = [0xFF31A2FD, 0xFF31FD8C, 0xFFFB33F5, 0xFFFD4531, 0xFFFBA633];
-				phillyWindow = new BGSprite('philly/window', city.x, city.y, 3.6, 3.6);
+				phillyWindow = new BGSprite('philly/window', city.x, city.y, 5.4, 5.4);
 				phillyWindow.setGraphicSize(Std.int(phillyWindow.width * 0.85));
 				phillyWindow.updateHitbox();
 				phillyWindow.scale.set(2.0, 2.0);
@@ -578,7 +578,7 @@ class PlayState extends MusicBeatState
 				phillyWindow.alpha = 0;
 
 				if(!ClientPrefs.lowQuality) {
-					var streetBehind:BGSprite = new BGSprite('philly/behindTrain', 120, 250);
+					var streetBehind:BGSprite = new BGSprite('philly/behindTrain', 200, 300);
 					streetBehind.scale.set(2.0, 2.0);
 					add(streetBehind);
 				}
@@ -590,7 +590,7 @@ class PlayState extends MusicBeatState
 				trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));
 				FlxG.sound.list.add(trainSound);
 
-				phillyStreet = new BGSprite('philly/street', 120, 250);
+				phillyStreet = new BGSprite('philly/street', 200, 300);
 				phillyStreet.scale.set(2.0, 2.0);
 				add(phillyStreet);
 
